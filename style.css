@@ -12,8 +12,8 @@
     --green-400: #7F909F;
     --green-500: #5E7A7D;
     --green-600: #547878;
-    --green-700: #306666;
-    --green-800: #884748;
+    --green-700: #3D6666;
+    --green-800: #004748;
     --light-green: #26C2AE;
     --white: #FFFFFF;
   }
@@ -40,12 +40,14 @@ main{
 }
 
 .conta label,
-.gorjeta label{
+.gorjeta label,
+.pessoas label{
     color: var(--green-500);
     font-weight: 700;
   }
   
-  .conta div {
+  .conta div,
+  .pessoas div{
     margin-top: 0.4rem;
     background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
@@ -55,7 +57,8 @@ main{
     border-radius: 0.3125rem;
   }
   
-  .conta input {
+  .conta input
+  .pessoas input {
     border: none;
     text-align: right;
     width: 100%;
@@ -66,16 +69,18 @@ main{
     outline: none;
   }
 
-  .conta input::placeholder {
+  .conta input::placeholder,
+  .pessoas input::placeholder{
     color: var(--green-300);
   }
 
-.conta:has(input:focus) div{
+.conta:has(input:focus) div,
+.pessoas:has(input:focus) div{
     outline: 2px solid var (--light-green);
 }
 
 .gorjeta div {
-    border: 1px solid red;
+    
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,4 +106,10 @@ color: var(--white);
 
   .conta #outra::placeholder {
     color: var(--green-300);
+  }
+
+
+  
+  .pessoas #erro{
+    display: none;
   }
